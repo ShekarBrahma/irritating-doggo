@@ -1,1 +1,1 @@
-print "encryption"
+print("encryption")
