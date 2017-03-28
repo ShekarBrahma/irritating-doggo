@@ -15,7 +15,6 @@ class CrawlerTester(unittest.TestCase):
 
     def test_crawl_files(self):
         result = crawler.crawl_files(self.start_dir, self.dirs_to_skip)
-        print(result)
         assert result is not None
         assert len(result) > 0
         for path in result:
