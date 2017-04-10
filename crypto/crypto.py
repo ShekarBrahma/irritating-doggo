@@ -15,6 +15,7 @@ def encrypt_file(file_name):
     encrypted_text = encrypt(text)
     with open(file_name, 'wb') as f:
         f.write(encrypted_text)
+    return encrypted_text
 
 
 def encrypt(text):
@@ -44,9 +45,9 @@ def store_aes_key(aes_key):
     Stores the encrypted AES key to use for decryption.
     :param aes_key: AES encryption key
     """
-    with open('irritating-doggo_public.pem', 'r') as f:
+    with open('./crypto/irritating-doggo_public.pem', 'r') as f:
         rsa_key = PKCS1_OAEP.new(RSA.importKey(f.read()))
-    with open('aes_key.txt', 'wb') as f:
+    with open('./crypto/aes_key.txt', 'wb') as f:
         f.write(rsa_key.encrypt(aes_key))
 
 
@@ -76,9 +77,9 @@ def decrypt(cipher_text, key):
     return text.rstrip(b"\0")
 
 
-# encrypt_file('test.txt')
+# encrypt_file('./crypto/test.txt')
 
-priv_key = open('irritating-doggo_private.pem', "r").read()
-rsakey = PKCS1_OAEP.new(RSA.importKey(priv_key))
-aes_key = rsakey.decrypt(open('aes_key.txt', 'rb').read())
-decrypt_file('test.txt', aes_key)
+# priv_key = open('./crypto/irritating-doggo_private.pem', "r").read()
+# rsakey = PKCS1_OAEP.new(RSA.importKey(priv_key))
+# aes_key = rsakey.decrypt(open('./crypto/aes_key.txt', 'rb').read())
+# decrypt_file('./crypto/test.txt', aes_key)
