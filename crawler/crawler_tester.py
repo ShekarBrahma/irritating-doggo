@@ -17,8 +17,8 @@ class CrawlerTester(unittest.TestCase):
         result = crawler.crawl_files(self.start_dir, self.dirs_to_skip)
         assert result is not None
         assert len(result) > 0
-        for path in result:
-            assert("dont touch" not in path)
+        for file in result:
+            assert("dont touch" not in file.path)
 
 if __name__ == '__main__':
     unittest.main()
