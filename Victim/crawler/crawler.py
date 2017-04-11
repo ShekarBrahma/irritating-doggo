@@ -22,4 +22,4 @@ def should_skip(path, dirs_to_skip):
 if __name__ == "__main__":
     dirs_to_skip = ["Program Files (x86)", "Program Files", "Windows", "Public", "Applications"]
     start_dir = "./crawler_test_dir"
-    print(crawl_files(start_dir, dirs_to_skip))
+    crawl_files(start_dir, dirs_to_skip)
