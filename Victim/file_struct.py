@@ -1,4 +1,4 @@
-import crypto.crypto as crypto #crypto
+import Victim.crypto.crypto as crypto #crypto
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 
