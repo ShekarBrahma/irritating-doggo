@@ -8,7 +8,7 @@ def crawl_files(start_dir, dirs_to_skip):
         if should_skip(path, dirs_to_skip):
             continue
         for name in files:
-            file = File(path + '\\' + name)
+            file = File(path + '/' + name)
             result.append(file)
     return result
 
@@ -22,4 +22,4 @@ def should_skip(path, dirs_to_skip):
 if __name__ == "__main__":
     dirs_to_skip = ["Program Files (x86)", "Program Files", "Windows", "Public", "Applications"]
     start_dir = "./crawler_test_dir"
-    print(crawl_files(start_dir, dirs_to_skip))
+    crawl_files(start_dir, dirs_to_skip)

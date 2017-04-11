@@ -22,4 +22,3 @@ for file in file_list:
     file.decrypt()
 
 print(len(find_encrypted(file_list)))
-

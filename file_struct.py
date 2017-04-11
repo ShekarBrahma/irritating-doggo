@@ -30,4 +30,5 @@ class File:
             crypto.decrypt_file(self.path, aes_key)
 
     def get_decrypted_key(self):
-        self.decrypted_key = "" # TODO get from piku's stuff
+        # TODO get from piku's stuff
+        self.decrypted_key = ""
