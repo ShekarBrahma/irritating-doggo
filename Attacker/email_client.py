@@ -1,9 +1,9 @@
 import smtplib
 import poplib
 from email import parser
-from email.MIMEMultipart import MIMEMultipart
-from email.MIMEText import MIMEText
-from email.MIMEBase import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
 from email import encoders
 import decrypt_rsa as decrypt
 
@@ -54,10 +54,10 @@ def send_mail(toaddr, content):
 def parse_email(message):
 
 	if message.is_multipart():
-	    for part in message.walk():
-	        ctype = part.get_content_type()
-	        cdispo = str(part.get('Content-Disposition'))
-            body = part.get_payload(decode=True)  # decode
+		for part in message.walk():
+			ctype = part.get_content_type()
+			cdispo = str(part.get('Content-Disposition'))
+			body = part.get_payload(decode=True)
             
 	# not multipart - i.e. plain text, no attachments, keeping fingers crossed
 	else:
@@ -83,7 +83,6 @@ for message in messages:
 	else:
 		send_mail(parse_id(email_id),"Invalid gift card received")
 pop_conn.quit()
-
 
 
 
