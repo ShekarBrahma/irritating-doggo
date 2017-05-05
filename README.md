@@ -16,6 +16,7 @@ You can follow these commands/directions to test the above explanation:
 * Make sure python3, PyAudio, and pycryptodome are installed
 * cd Victim
 * python3 game.py
+* Enjoy awesome background music
 * Select “I give up”
 * Ensure files in Victim/run_test_dir have been encrypted
 * Select “Ok”
@@ -26,6 +27,7 @@ You can follow these commands/directions to test the above explanation:
 * python3 email_client.py
 * Download key.txt from response
 * Return to game.py prompt and select “Continue”
-* Select “key.txt”
+* Choose key.txt
+* Select "Close"
 * Ensure files in Victim/run_test_dir are decrypted
 
