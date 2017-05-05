@@ -4,8 +4,8 @@ Group Members: Shekar Brahma (brahma2), Wyatt Duiker (duiker2), Shailpik Roy (sr
 Background : Our project is a ransomware program that will continuously encrypt files on the victim’s machine, until they provide us with the random (Amazon Gift Card Code).
 
 Requirements:
-PyAudio 0.2.11
-pycryptodome 3.4.5
+* PyAudio 0.2.11
+* pycryptodome 3.4.5
 
 Our project has two different programs, one meant to be run on the victim’s machine, and the other on the attacker’s machine. 
 
