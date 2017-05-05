@@ -89,7 +89,7 @@ def fake_close():
     pass
     print("fake_close")
     # TODO remove this root.destroy to prevent them from immediately closing it
-    root.destroy()
+    #root.destroy()
 
 def play_audio():
     wf = wave.open("sound.wav")
