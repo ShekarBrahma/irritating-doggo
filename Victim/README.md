@@ -7,4 +7,4 @@ crypto:
 * Encryption on a file is done in two parts. First, a AES key is generated for the file, and then the file is encrypted with that key. Second, the AES key will be encrypted with a public RSA key, which was created with a private key beforehand, and then the encrypted key is stored into the data structure in file_struct.py. 
 
 file_struct:
-* Defines a File object that stores data on the files our ransomware is targeting, specifically the encryption and decryption keys. The decryption key data is kept null until the key.txt file is provided my the user.
+* Defines a File object that stores data on the files our ransomware is targeting, specifically the encryption and decryption keys. The decryption key data is kept null until the key.txt file is provided by the user.
