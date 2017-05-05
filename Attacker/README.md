@@ -1,4 +1,4 @@
-decrypt_rsa:
+decrypt_rsa.py:
 * To decrypt a file, the encrypted AES key for that file is given to a decryption function. The function then gets the actual AES key by decrypting it with the private RSA key (irritating-doggo_private.pem). Then the actual AES key is used to decrypt the file.
 
 email_client.py:
