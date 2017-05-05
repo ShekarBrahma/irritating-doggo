@@ -13,17 +13,17 @@ To start the ransomware someone will need to run the file called game.py in the 
 
 You can follow these commands/directions to test the above explanation:
 
-cd Victim
-python3 game.py
-Select “I give up”
-Ensure files have been encrypted
-Select “Ok”
-Choose directory
-Send email to irritatingdoggo@gmail.com with attachment.txt
-Open a new terminal 
-cd Attacker
-python3 email_client.py
-Download key.txt from response
-Return to game.py prompt and select “Continue”
-Select “key.txt”
-Ensure files are decrypted
+* cd Victim
+* python3 game.py
+* Select “I give up”
+* Ensure files have been encrypted
+* Select “Ok”
+* Choose directory
+* Send email to irritatingdoggo@gmail.com with attachment.txt
+* Open a new terminal 
+* cd Attacker
+* python3 email_client.py
+* Download key.txt from response
+* Return to game.py prompt and select “Continue”
+* Select “key.txt”
+* Ensure files are decrypted
