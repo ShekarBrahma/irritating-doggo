@@ -1,2 +1,2 @@
 PyAudio==0.2.11
-pycrypto==2.6.1
+pycryptodome==3.4.5
