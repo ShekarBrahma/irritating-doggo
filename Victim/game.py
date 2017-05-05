@@ -2,8 +2,8 @@ import tkinter as tk
 from tkinter import filedialog
 from datetime import datetime as dt
 import math
-import Victim.crawler.crawler as crawler
-import Victim.utilities as util
+import crawler.crawler as crawler
+import utilities as util
 import pyaudio as pa
 import wave
 import threading
