@@ -20,7 +20,7 @@ You can follow these commands/directions to test the above explanation:
 * Ensure files in Victim/run_test_dir have been encrypted
 * Select “Ok”
 * Choose directory
-* Send email to irritatingdoggo@gmail.com with attachment.txt
+* Send email to irritatingdoggo@gmail.com with attachment.txt (located in the choosen directory)
 * Open a new terminal 
 * cd Attacker
 * python3 email_client.py
