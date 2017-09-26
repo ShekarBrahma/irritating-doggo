@@ -1,5 +1,5 @@
 # irritating-doggo
-Group Members: Shekar Brahma (brahma2), Wyatt Duiker (duiker2), Shailpik Roy (sroy15)
+Members: Shekar Brahma, Wyatt Duiker, Shailpik Roy
 
 Background : Our project is a ransomware program that will continuously encrypt files on the victim’s machine, until they provide us with the random (Amazon Gift Card Code).
 
